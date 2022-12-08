@@ -36,7 +36,7 @@ public class Matrizen
         {
             for (j = 0; j < Matrix[0].length; j++)
             {
-                System.out.println("Spalte: " + i + ", " + "Zeile:" + j);
+                System.out.println("Spalte: " + i + ", " + "Zeile: " + j);
 
                 Matrix[i][j] = Matrix_Scanner.nextDouble();
 
