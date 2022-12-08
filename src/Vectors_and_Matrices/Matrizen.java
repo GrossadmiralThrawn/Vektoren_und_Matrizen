@@ -16,7 +16,7 @@ public class Matrizen
 
 
 
-    public Matrizen(int Height, int Width)
+    public Matrizen(@NotNull int Height, @NotNull int Width)
     {
         Matrix = new Double[Height][Width];
     }
@@ -49,7 +49,7 @@ public class Matrizen
 
 
 
-    public Double getElement(int Height, int Width)
+    public Double getElement(@NotNull int Height, @NotNull int Width)
     {
         return Matrix[Height][Width];
     }
@@ -141,7 +141,7 @@ public class Matrizen
 
 
 
-    public void setMatrixElement (int Height, int Width, Double Element)
+    public void setMatrixElement (@NotNull int Height, @NotNull int Width, Double Element)
     {
         Matrix[Height][Width] = Element;
     }
