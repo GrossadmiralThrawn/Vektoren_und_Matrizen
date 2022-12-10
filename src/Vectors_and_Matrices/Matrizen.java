@@ -174,9 +174,41 @@ public class Matrizen
 
     public Matrizen Mat_Mul_With_Transposed_Matrix (@NotNull Matrizen Second_Matrix_Untransposed)
     {
+        int i, j;
         Matrizen Transposed_Matrix = new Matrizen(Second_Matrix_Untransposed.getLength(), Second_Matrix_Untransposed.getHeight());
 
 
-        Transposed_Matrix = Second_Matrix_Untransposed.Transpose_Matrix()
+
+        for (i = 0; i < Matrix.length; i++)
+        {
+            for (j = 0; j < Matrix[0].length; j++)
+            {
+                Transposed_Matrix.setMatrixElement(j, i, Matrix[i][j]);
+            }
+        }
+
+
+        if (Matrix[0].length == Transposed_Matrix.getHeight())
+        {
+            for (i = 0; i < Matrix[0].length; i++)
+            {
+                for (j = 0; j < Matrix.length; j++)
+                {
+                    Transposed_Matrix.setMatrixElement(i, j,  Matrix[i][j] * Transposed_Matrix.getElement(j, i));
+                }
+            }
+
+
+            
+            return Transposed_Matrix;
+        }
+        else
+        {
+            System.out.println("Leider ist die Anzahl der Zeilen verschieden von der Anzahl von Spalten.");
+
+
+
+            return null;
+        }
     }
 }
