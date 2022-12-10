@@ -145,4 +145,38 @@ public class Matrizen
     {
         Matrix[Height][Width] = Element;
     }
+
+
+
+
+    public Matrizen Transpose_Matrix ()
+    {
+        int i, j;
+        Matrizen Transponated_Matrix = new Matrizen(Matrix[0].length, Matrix.length);
+
+
+
+        for (i = 0; i < Matrix.length; i++)
+        {
+            for (j = 0; j < Matrix[0].length; j++)
+            {
+                Transponated_Matrix.setMatrixElement(j, i, Matrix[i][j]);
+            }
+        }
+
+
+
+        return Transponated_Matrix;
+    }
+
+
+
+
+    public Matrizen Mat_Mul_With_Transposed_Matrix (@NotNull Matrizen Second_Matrix_Untransposed)
+    {
+        Matrizen Transposed_Matrix = new Matrizen(Second_Matrix_Untransposed.getLength(), Second_Matrix_Untransposed.getHeight());
+
+
+        Transposed_Matrix = Second_Matrix_Untransposed.Transpose_Matrix()
+    }
 }
