@@ -38,7 +38,7 @@ public class Matrizen
             {
                 System.out.println("Spalte: " + i + ", " + "Zeile: " + j);
 
-                Matrix[i][j] = Matrix_Scanner.nextDouble();
+                Matrix[i][j] = 291.239;
 
 
                 System.out.println("\n");
@@ -114,7 +114,8 @@ public class Matrizen
 
     public Matrizen Mat_Mul (@NotNull Matrizen Second_Matrix)
     {
-        int i, j;
+        int i, j, k, l;
+        double Ergebnis = 0;
         Matrizen Neue_Matrix = new Matrizen(Matrix.length, Matrix[0].length);
 
 
@@ -124,7 +125,21 @@ public class Matrizen
             {
                 for (j = 0; j < Matrix.length; j++)
                 {
-                    Neue_Matrix.setMatrixElement(i, j,  Matrix[i][j] * Second_Matrix.getElement(j, i));
+                    for (k = 0; k < Matrix.length; k++)
+                    {
+                        for (l = 0; l < Matrix[0].length; l++)
+                        {
+                            Ergebnis += Matrix[k][l] * Second_Matrix.getElement(l, k);
+                        }
+                    }
+
+
+
+                    Neue_Matrix.setMatrixElement(i, j, Ergebnis);
+
+
+
+                    Ergebnis = 0.0;
                 }
             }
 
@@ -152,6 +167,7 @@ public class Matrizen
     public Matrizen Transpose_Matrix ()
     {
         int i, j;
+        double Result = 0;
         Matrizen Transponated_Matrix = new Matrizen(Matrix[0].length, Matrix.length);
 
 

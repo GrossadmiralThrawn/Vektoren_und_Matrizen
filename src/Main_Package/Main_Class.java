@@ -23,14 +23,9 @@ public class Main_Class
 
         New_Matrix.Fill_Matrix();
 
-        New_Matrix.Print_Matrix();
-
 
 
         New_Matrix_2.Fill_Matrix();
-
-
-        System.out.println(New_Matrix.Is_Quadratic());
 
 
 

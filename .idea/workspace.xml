@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="39e2299b-0dbe-4a77-8bc1-8389a6cc2c7b" name="Changes" comment="Verbesserung der Ausgabe.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main_Package/Main_Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Package/Main_Class.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +46,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -74,6 +76,8 @@
       <workItem from="1670276110045" duration="1141000" />
       <workItem from="1670314504804" duration="17378000" />
       <workItem from="1670416266029" duration="28094000" />
+      <workItem from="1670707590899" duration="25000" />
+      <workItem from="1670751122774" duration="3537000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellung der Klassen.">
       <created>1670437688039</created>
@@ -117,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670490089286</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Verbesserung der Ausgabe.">
+      <created>1670707610321</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670707610321</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
