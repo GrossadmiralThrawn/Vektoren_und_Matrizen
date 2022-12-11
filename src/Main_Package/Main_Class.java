@@ -14,9 +14,10 @@ public class Main_Class
         Double   Skalar_Produkt = 0.0;
         Vector   Neuer_Vektor   = new Vector(Array);
         Vector   Skalar_Vektor  = new Vector(Array_2);
-        Matrizen New_Matrix     = new Matrizen(5, 5);
-        Matrizen New_Matrix_2   = new Matrizen(5, 5);
-        Matrizen Matrix_Produkt = new Matrizen(5, 5);
+        Matrizen New_Matrix     = new Matrizen(60, 40);
+        Matrizen New_Matrix_2   = new Matrizen(60, 40);
+        Matrizen New_Matrix_3   = new Matrizen(60, 40);
+        Matrizen Matrix_Produkt = new Matrizen(40, 60);
 
 
 
@@ -24,13 +25,38 @@ public class Main_Class
         New_Matrix.Fill_Matrix();
 
 
-
         New_Matrix_2.Fill_Matrix();
 
 
+        New_Matrix_3.Fill_Matrix();
+
+
+
+        long Beginn = System.currentTimeMillis();
 
         Matrix_Produkt = New_Matrix.Mat_Mul(New_Matrix_2);
 
-        Matrix_Produkt.Print_Matrix();
+        long Ende   = System.currentTimeMillis();
+
+
+        long Dauer = Ende - Beginn;
+
+
+        System.out.println(Dauer);
+
+
+
+        /*Beginn = System.currentTimeMillis();
+
+        Matrix_Produkt = New_Matrix.Mat_Mul_With_Transposed_Matrix(New_Matrix_3);
+
+        Ende   = System.currentTimeMillis();
+
+
+        Dauer = Ende - Beginn;
+
+
+        System.out.println(Dauer);*/
+
     }
 }

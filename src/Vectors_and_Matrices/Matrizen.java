@@ -190,8 +190,11 @@ public class Matrizen
 
     public Matrizen Mat_Mul_With_Transposed_Matrix (@NotNull Matrizen Second_Matrix_Untransposed)
     {
-        int i, j;
+        int i, j, k, l;
+        double Ergebnis = 0;
         Matrizen Transposed_Matrix = new Matrizen(Second_Matrix_Untransposed.getLength(), Second_Matrix_Untransposed.getHeight());
+        Matrizen Neue_Matrix = new Matrizen(Matrix.length, Matrix[0].length);
+
 
 
 
@@ -210,7 +213,21 @@ public class Matrizen
             {
                 for (j = 0; j < Matrix.length; j++)
                 {
-                    Transposed_Matrix.setMatrixElement(i, j,  Matrix[i][j] * Transposed_Matrix.getElement(j, i));
+                    for (k = 0; k < Matrix.length; k++)
+                    {
+                        for (l = 0; l < Matrix[0].length; l++)
+                        {
+                            Ergebnis += Matrix[k][l] * Second_Matrix_Untransposed.getElement(l, k);
+                        }
+                    }
+
+
+
+                    Neue_Matrix.setMatrixElement(i, j, Ergebnis);
+
+
+
+                    Ergebnis = 0.0;
                 }
             }
 
