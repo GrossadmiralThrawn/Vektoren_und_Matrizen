@@ -2,6 +2,7 @@ package Main_Package;
 
 
 import Vectors_and_Matrices.Matrizen;
+import Vectors_and_Matrices.Matrizen_2;
 import Vectors_and_Matrices.Vector;
 
 public class Main_Class
@@ -14,11 +15,10 @@ public class Main_Class
         Double   Skalar_Produkt = 0.0;
         Vector   Neuer_Vektor   = new Vector(Array);
         Vector   Skalar_Vektor  = new Vector(Array_2);
-        Matrizen New_Matrix     = new Matrizen(60, 40);
-        Matrizen New_Matrix_2   = new Matrizen(60, 40);
-        Matrizen New_Matrix_3   = new Matrizen(60, 40);
-        Matrizen Matrix_Produkt = new Matrizen(40, 60);
-
+        Matrizen_2 New_Matrix     = new Matrizen_2(5, 5);
+        Matrizen_2 New_Matrix_2   = new Matrizen_2(5, 5);
+        Matrizen_2 New_Matrix_3   = new Matrizen_2(5, 5);
+        Matrizen_2 Matrix_Produkt = new Matrizen_2(5, 5);
 
 
 
@@ -37,6 +37,9 @@ public class Main_Class
         Matrix_Produkt = New_Matrix.Mat_Mul(New_Matrix_2);
 
         long Ende   = System.currentTimeMillis();
+
+
+        Matrix_Produkt.Print_Matrix();
 
 
         long Dauer = Ende - Beginn;

@@ -38,7 +38,15 @@ public class Matrizen
             {
                 System.out.println("Spalte: " + i + ", " + "Zeile: " + j);
 
-                Matrix[i][j] = 291.239;
+
+                if (i % 2 == 0)
+                {
+                    Matrix[i][j] = 291.239;
+                }
+                else
+                {
+                    Matrix[i][j] = 300.5;
+                }
 
 
                 System.out.println("\n");
@@ -121,17 +129,10 @@ public class Matrizen
 
         if (Matrix[0].length == Second_Matrix.getHeight())
         {
-            for (i = 0; i < Matrix[0].length; i++)
+            for (i = 0; i < Matrix.length; i++)
             {
-                for (j = 0; j < Matrix.length; j++)
+                for (j = 0; j < Matrix[0].length; j++)
                 {
-                    for (k = 0; k < Matrix.length; k++)
-                    {
-                        for (l = 0; l < Matrix[0].length; l++)
-                        {
-                            Ergebnis += Matrix[k][l] * Second_Matrix.getElement(l, k);
-                        }
-                    }
 
 
 

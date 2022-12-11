@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39e2299b-0dbe-4a77-8bc1-8389a6cc2c7b" name="Changes" comment="Korrektur der Matrix-Multiplikation.">
+    <list default="true" id="39e2299b-0dbe-4a77-8bc1-8389a6cc2c7b" name="Changes" comment="Erweiterung der Funktionen.">
+      <change afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main_Package/Main_Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Package/Main_Class.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen.java" afterDir="false" />
