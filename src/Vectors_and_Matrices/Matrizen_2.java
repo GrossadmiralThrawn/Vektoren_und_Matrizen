@@ -106,21 +106,22 @@ public class Matrizen_2
     public void Print_Matrix()
     {
         int i, j;
+        int Border = Matrix[0].length - 1;
+
+
+        System.out.println(Border);
 
 
 
-        for (i = 0; i < 5; i++)
+        for (i = 0; i < Matrix.length; i++)
         {
-            for (j = 0; j < 5; j++)
+            for (j = 0; j < Matrix[0].length; j++)
             {
                 System.out.print(Matrix[i][j] + " ");
-
-
-                if ((j != 0) && (j % (Matrix[0].length - 1) == 0))
-                {
-                    System.out.println("\n");
-                }
             }
+
+
+            System.out.println("\n");
         }
     }
 
@@ -146,24 +147,108 @@ public class Matrizen_2
 
 
 
+        if (Matrix[0].length == To_Multiply_Matrix.getLines())
+        {
+            for (i = 0; i < Matrix.length; i++)
+            {
+                for (j = 0; j < Matrix[0].length; j++)
+                {
+                    for (k = 0; k < Matrix[0].length; k++)
+                    {
+                        Ergebnis += Matrix[i][k] * To_Multiply_Matrix.getElement(k, i);
+                    }
+
+
+                    Neue_Matrix.setElement(i, j, Ergebnis);
+
+                    Ergebnis = 0;
+                }
+            }
+
+
+
+            return Neue_Matrix;
+        }
+        else
+        {
+            System.out.println("Leider ist die Anzahl der Zeilen verschieden von der Anzahl der Spalten.");
+
+
+
+            return null;
+        }
+    }
+
+
+
+
+    public Matrizen_2 Transpose_Matrix ()
+    {
+        int i, j;
+        double Result = 0;
+        Matrizen_2 Transposed_Matrix = new Matrizen_2(Matrix[0].length, Matrix.length);
+
+
+
         for (i = 0; i < Matrix.length; i++)
         {
             for (j = 0; j < Matrix[0].length; j++)
             {
-                for (k = 0; k < Matrix.length; k++)
-                {
-                    Ergebnis += Matrix[i][k] * To_Multiply_Matrix.getElement(k, i);
-                }
-
-
-                Neue_Matrix.setElement(i, j, Ergebnis);
-
-                Ergebnis = 0;
+                Transposed_Matrix.setElement(j, i, Matrix[i][j]);
             }
         }
 
 
 
-        return Neue_Matrix;
+        return Transposed_Matrix;
+    }
+
+
+
+
+    public Matrizen_2 Mat_Mul_With_Transposed_Matrix (@NotNull Matrizen_2 To_Multiply_Matrix_Untransposed)
+    {
+        int i, j, k;
+        double Ergebnis = 0;
+        Matrizen_2 Zwischen_Matrix = new Matrizen_2(To_Multiply_Matrix_Untransposed.getRows(), To_Multiply_Matrix_Untransposed.getLines());
+        Matrizen_2 Neue_Matrix = new Matrizen_2(Matrix.length, Matrix[0].length);
+
+
+
+        if (Matrix[0].length == To_Multiply_Matrix_Untransposed.getRows())
+        {
+            for (i = 0; i < To_Multiply_Matrix_Untransposed.getLines(); i++)
+            {
+                for (j = 0; j < To_Multiply_Matrix_Untransposed.getRows(); j++)
+                {
+                    Zwischen_Matrix.setElement(j, i, Matrix[i][j]);
+                }
+            }
+
+
+            for (i = 0; i < Matrix.length; i++) {
+                for (j = 0; j < Matrix[0].length; j++) {
+                    for (k = 0; k < Matrix[0].length; k++) {
+                        Ergebnis += Matrix[i][k] * Zwischen_Matrix.getElement(k, i);
+                    }
+
+
+                    Neue_Matrix.setElement(i, j, Ergebnis);
+
+                    Ergebnis = 0;
+                }
+            }
+
+
+            return Neue_Matrix;
+        }
+        else
+        {
+            System.out.println("Leider sind die Matrizen verschieden, weswegen diese Funktion nicht ausgeführt werden kann.");
+
+
+            return null;
+        }
+
     }
 }

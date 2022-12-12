@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39e2299b-0dbe-4a77-8bc1-8389a6cc2c7b" name="Changes" comment="Erweiterung der Funktionen.">
-      <change afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen_2.java" afterDir="false" />
+    <list default="true" id="39e2299b-0dbe-4a77-8bc1-8389a6cc2c7b" name="Changes" comment="Erstellung einer neuen, aber funktionsfähigen Matrizen Klasse.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main_Package/Main_Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Package/Main_Class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrizen_2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +78,8 @@
       <workItem from="1670416266029" duration="28094000" />
       <workItem from="1670707590899" duration="25000" />
       <workItem from="1670751122774" duration="6759000" />
+      <workItem from="1670831136718" duration="854000" />
+      <workItem from="1670836363065" duration="5814000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellung der Klassen.">
       <created>1670437688039</created>
@@ -136,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670755603330</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Erstellung einer neuen, aber funktionsfähigen Matrizen Klasse.">
+      <created>1670792914094</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670792914094</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +166,8 @@
     <MESSAGE value="Testung des Codes." />
     <MESSAGE value="Verbesserung der Ausgabe." />
     <MESSAGE value="Korrektur der Matrix-Multiplikation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Korrektur der Matrix-Multiplikation." />
+    <MESSAGE value="Erstellung einer" />
+    <MESSAGE value="Erstellung einer neuen, aber funktionsfähigen Matrizen Klasse." />
+    <option name="LAST_COMMIT_MESSAGE" value="Erstellung einer neuen, aber funktionsfähigen Matrizen Klasse." />
   </component>
 </project>
