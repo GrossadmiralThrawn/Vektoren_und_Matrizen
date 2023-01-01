@@ -153,15 +153,17 @@ public class Matrizen_2
             {
                 for (j = 0; j < Matrix[0].length; j++)
                 {
+                    Neue_Matrix.setElement(i, j, 0.0);
+
+
+
                     for (k = 0; k < Matrix[0].length; k++)
                     {
-                        Ergebnis += Matrix[i][k] * To_Multiply_Matrix.getElement(k, i);
+                        Neue_Matrix.setElement(i, j, Neue_Matrix.getElement(i, j) + Matrix[i][k] * To_Multiply_Matrix.getElement(k, j));
+
+                        System.out.println(Neue_Matrix.getElement(i, j));
                     }
-
-
-                    Neue_Matrix.setElement(i, j, Ergebnis);
-
-                    Ergebnis = 0;
+                    System.out.println();
                 }
             }
 
@@ -229,7 +231,7 @@ public class Matrizen_2
             for (i = 0; i < Matrix.length; i++) {
                 for (j = 0; j < Matrix[0].length; j++) {
                     for (k = 0; k < Matrix[0].length; k++) {
-                        Ergebnis += Matrix[i][k] * Zwischen_Matrix.getElement(k, i);
+                        Ergebnis += Matrix[j][k] * Zwischen_Matrix.getElement(k, j);
                     }
 
 
