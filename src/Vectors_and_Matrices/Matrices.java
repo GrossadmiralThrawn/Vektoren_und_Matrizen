@@ -1,8 +1,8 @@
 package Vectors_and_Matrices;
 
 
-import org.jetbrains.annotations.NotNull;
 
+import org.jetbrains.annotations.NotNull;
 import java.util.Scanner;
 
 
