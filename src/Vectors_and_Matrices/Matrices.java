@@ -193,7 +193,7 @@ public class Matrices
         {
             for (j = 0; j < Matrix[0].length; j++)
             {
-                Transposed_Matrix.setElement(j, i, Matrix[i][j]);
+                Transposed_Matrix.setElement(j, i, Matrix[i][j]); //Kopiert Element an andere Stelle.
             }
         }
 
@@ -214,13 +214,13 @@ public class Matrices
 
 
 
-        if (Matrix[0].length == To_Multiply_Matrix_Untransposed.getRows())
+        if (Matrix[0].length == To_Multiply_Matrix_Untransposed.getRows()) //Checkt ob die eine Matrix die gleiche Breite wie die andere hat.
         {
             for (i = 0; i < To_Multiply_Matrix_Untransposed.getLines(); i++)
             {
                 for (j = 0; j < To_Multiply_Matrix_Untransposed.getRows(); j++)
                 {
-                    Zwischen_Matrix.setElement(j, i, Matrix[i][j]);
+                    Zwischen_Matrix.setElement(j, i, Matrix[i][j]); //Transponiert Matrix vor Multiplikation.
                 }
             }
 
