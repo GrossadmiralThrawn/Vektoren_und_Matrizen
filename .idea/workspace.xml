@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39e2299b-0dbe-4a77-8bc1-8389a6cc2c7b" name="Changes" comment="Korrektur von Bugs.">
-      <change afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main_Package/Main_Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main_Package/Main_Class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrices.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vectors_and_Matrices/Vector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Vector.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="91j4af1t" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,21 +44,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main_Package.Main_Class" />
@@ -83,6 +87,7 @@
       <workItem from="1670836363065" duration="5814000" />
       <workItem from="1672591291694" duration="84000" />
       <workItem from="1672591450988" duration="3115000" />
+      <workItem from="1683208640216" duration="998000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellung der Klassen.">
       <created>1670437688039</created>

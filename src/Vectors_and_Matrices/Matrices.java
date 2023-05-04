@@ -25,7 +25,7 @@ public class Matrices
 
     public Matrices(int lines, int rows)
     {
-        Matrix = new Double[lines][rows];
+        matrix = new Double[lines][rows];
     }
 
 
@@ -33,7 +33,7 @@ public class Matrices
 
     public int getLines()
     {
-        return Matrix.length;
+        return matrix.length;
     }
 
 
@@ -41,15 +41,15 @@ public class Matrices
 
     public int getRows()
     {
-        return Matrix[0].length;
+        return matrix[0].length;
     }
 
 
 
 
-    public Double getElement(@NotNull int Height, @NotNull int Width)
+    public Double getElement(@NotNull int height, @NotNull int width)
     {
-        return Matrix[Height][Width];
+        return matrix[height][width];
     }
 
 
@@ -57,26 +57,27 @@ public class Matrices
 
     public void Fill_Matrix ()
     {
-        int i, j;
+        int     i;
+        int     j;
         Scanner Matrix_Scanner = new Scanner(System.in);
 
 
 
 
-        for (i = 0; i < Matrix.length; i++)
+        for (i = 0; i < matrix.length; i++)
         {
-            for (j = 0; j < Matrix[0].length; j++)
+            for (j = 0; j < matrix[0].length; j++)
             {
                 System.out.println("Spalte: " + i + ", " + "Zeile: " + j);
 
 
                 if (i % 2 == 0)
                 {
-                    Matrix[i][j] = 291.239;
+                    matrix[i][j] = 291.239;
                 }
                 else
                 {
-                    Matrix[i][j] = 300.5;
+                    matrix[i][j] = 300.5;
                 }
 
 
@@ -90,7 +91,7 @@ public class Matrices
 
     public boolean Is_Quadratic()
     {
-        if (Matrix.length == Matrix[0].length)
+        if (matrix.length == matrix[0].length)
         {
             return true;
         }
@@ -106,18 +107,18 @@ public class Matrices
     public void Print_Matrix()
     {
         int i, j;
-        int Border = Matrix[0].length - 1;
+        int Border = matrix[0].length - 1;
 
 
         System.out.println(Border);
 
 
 
-        for (i = 0; i < Matrix.length; i++)
+        for (i = 0; i < matrix.length; i++)
         {
-            for (j = 0; j < Matrix[0].length; j++)
+            for (j = 0; j < matrix[0].length; j++)
             {
-                System.out.print(Matrix[i][j] + " ");
+                System.out.print(matrix[i][j] + " ");
             }
 
 
@@ -131,7 +132,7 @@ public class Matrices
 
     public void setElement (@NotNull int Line, @NotNull int Row, Double Element)
     {
-        Matrix[Line][Row] = Element;
+        matrix[Line][Row] = Element;
     }
 
 
@@ -140,26 +141,28 @@ public class Matrices
 
     public Matrices Mat_Mul (Matrices To_Multiply_Matrix)
     {
-        int i, j, k;
-        double Ergebnis = 0;
-        Matrices Neue_Matrix = new Matrices(Matrix.length, Matrix[0].length);
+        int      i;
+        int      j;
+        int      k;
+        double   Ergebnis = 0;
+        Matrices Neue_Matrix = new Matrices(matrix.length, matrix[0].length);
 
 
 
 
-        if (Matrix[0].length == To_Multiply_Matrix.getLines())
+        if (matrix[0].length == To_Multiply_Matrix.getLines())
         {
-            for (i = 0; i < Matrix.length; i++)
+            for (i = 0; i < matrix.length; i++)
             {
-                for (j = 0; j < Matrix[0].length; j++)
+                for (j = 0; j < matrix[0].length; j++)
                 {
                     Neue_Matrix.setElement(i, j, 0.0);
 
 
 
-                    for (k = 0; k < Matrix[0].length; k++)
+                    for (k = 0; k < matrix[0].length; k++)
                     {
-                        Neue_Matrix.setElement(i, j, Neue_Matrix.getElement(i, j) + Matrix[i][k] * To_Multiply_Matrix.getElement(k, j));
+                        Neue_Matrix.setElement(i, j, Neue_Matrix.getElement(i, j) + matrix[i][k] * To_Multiply_Matrix.getElement(k, j));
                     }
                 }
             }
@@ -181,19 +184,24 @@ public class Matrices
 
 
 
+    /**
+     * Function transpose a matrix.
+     *
+     * @return the transposed matrix.
+     */
     public Matrices Transpose_Matrix ()
     {
         int i, j;
         double Result = 0;
-        Matrices Transposed_Matrix = new Matrices(Matrix[0].length, Matrix.length);
+        Matrices Transposed_Matrix = new Matrices(matrix[0].length, matrix.length);
 
 
 
-        for (i = 0; i < Matrix.length; i++)
+        for (i = 0; i < matrix.length; i++)
         {
-            for (j = 0; j < Matrix[0].length; j++)
+            for (j = 0; j < matrix[0].length; j++)
             {
-                Transposed_Matrix.setElement(j, i, Matrix[i][j]); //Kopiert Element an andere Stelle.
+                Transposed_Matrix.setElement(j, i, matrix[i][j]); //Kopiert Element an andere Stelle.
             }
         }
 
@@ -205,41 +213,43 @@ public class Matrices
 
 
 
-    public Matrices Mat_Mul_With_Transposed_Matrix (@NotNull Matrices To_Multiply_Matrix_Untransposed)
+    public Matrices Mat_Mul_With_Transposed_Matrix (@NotNull Matrices to_Multiply_Matrix_Untransposed)
     {
-        int i, j, k;
-        double Ergebnis = 0;
-        Matrices Zwischen_Matrix = new Matrices(To_Multiply_Matrix_Untransposed.getRows(), To_Multiply_Matrix_Untransposed.getLines());
-        Matrices Neue_Matrix = new Matrices(Matrix.length, Matrix[0].length);
+        int      i;
+        int      j;
+        int      k;
+        double   result = 0;
+        Matrices zwischen_Matrix = new Matrices(to_Multiply_Matrix_Untransposed.getRows(), to_Multiply_Matrix_Untransposed.getLines());
+        Matrices neue_Matrix     = new Matrices(matrix.length, matrix[0].length);
 
 
 
-        if (Matrix[0].length == To_Multiply_Matrix_Untransposed.getRows()) //Checkt ob die eine Matrix die gleiche Breite wie die andere hat.
+        if (matrix[0].length == to_Multiply_Matrix_Untransposed.getRows()) //Checkt ob die eine Matrix die gleiche Breite wie die andere hat.
         {
-            for (i = 0; i < To_Multiply_Matrix_Untransposed.getLines(); i++)
+            for (i = 0; i < to_Multiply_Matrix_Untransposed.getLines(); i++)
             {
-                for (j = 0; j < To_Multiply_Matrix_Untransposed.getRows(); j++)
+                for (j = 0; j < to_Multiply_Matrix_Untransposed.getRows(); j++)
                 {
-                    Zwischen_Matrix.setElement(j, i, Matrix[i][j]); //Transponiert Matrix vor Multiplikation.
+                    zwischen_Matrix.setElement(j, i, matrix[i][j]); //Transponiert Matrix vor Multiplikation.
                 }
             }
 
 
-            for (i = 0; i < Matrix.length; i++)
+            for (i = 0; i < matrix.length; i++)
             {
-                for (j = 0; j < Matrix[0].length; j++)
+                for (j = 0; j < matrix[0].length; j++)
                 {
-                    Neue_Matrix.setElement(i, j, 0.0);
-                    for (k = 0; k < Matrix[0].length; k++)
+                    neue_Matrix.setElement(i, j, 0.0);
+                    for (k = 0; k < matrix[0].length; k++)
                     {
-                        Neue_Matrix.setElement(i, j, Neue_Matrix.getElement(i, j) + Matrix[i][k] * Zwischen_Matrix.getElement(k, j));
+                        neue_Matrix.setElement(i, j, neue_Matrix.getElement(i, j) + matrix[i][k] * zwischen_Matrix.getElement(k, j));
                     }
                 }
             }
 
 
 
-            return Neue_Matrix;
+            return neue_Matrix;
         }
         else
         {

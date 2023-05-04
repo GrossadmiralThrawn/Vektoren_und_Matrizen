@@ -3,11 +3,11 @@ package Vectors_and_Matrices
 
 
 
-class Vector(private var Vektor_Array: Array<Double>)
+class Vector(private var vektor_Array: Array<Double>)
 {
     fun Add_Element(To_Add_Element: Double)
     {
-        Vektor_Array.plus(To_Add_Element)
+        vektor_Array.plus(To_Add_Element)
     }
 
 
@@ -15,7 +15,7 @@ class Vector(private var Vektor_Array: Array<Double>)
 
     fun getElement(Position: Int): Double
     {
-        return Vektor_Array[Position]
+        return vektor_Array[Position]
     }
 
 
@@ -23,30 +23,36 @@ class Vector(private var Vektor_Array: Array<Double>)
 
     fun getSize(): Int
     {
-        return Vektor_Array.size
+        return vektor_Array.size
     }
 
 
-
-
-    fun Dot_Product(Second_Vector: Vector): Double
+    /**
+     * Function calculates the dot product of a vector.
+     *
+     * @param:  Element of type vector
+     * @return: Dot product
+     */
+    fun Dot_Product(second_Vector: Vector): Double
     {
         var i:              Int    = 0
-        var Skalar_Produkt: Double = 0.0
-        var Position:       Int    = 0
+        var skalar_Produkt: Double = 0.0
+        var position:       Int    = 0
 
 
 
-        if (Vektor_Array.size == Second_Vector.getSize())
+        if (vektor_Array.size == second_Vector.getSize())
         {
-            for (i in Vektor_Array)
+            for (i in vektor_Array)
             {
-                Skalar_Produkt += (i * Second_Vector.getElement(Position))
+                skalar_Produkt += (i * second_Vector.getElement(position))
 
 
-                Position++
+                position++
             }
-            return Skalar_Produkt
+
+
+            return skalar_Produkt
         }
         else
         {
