@@ -193,7 +193,7 @@ public class Matrices
     {
         int i, j;
         double Result = 0;
-        Matrices Transposed_Matrix = new Matrices(matrix[0].length, matrix.length);
+        Matrices transposed_Matrix = new Matrices(matrix[0].length, matrix.length);
 
 
 
@@ -201,24 +201,31 @@ public class Matrices
         {
             for (j = 0; j < matrix[0].length; j++)
             {
-                Transposed_Matrix.setElement(j, i, matrix[i][j]); //Kopiert Element an andere Stelle.
+                transposed_Matrix.setElement(j, i, matrix[i][j]); //Kopiert Element an andere Stelle.
             }
         }
 
 
 
-        return Transposed_Matrix;
+        return transposed_Matrix;
     }
 
 
 
 
+    /**
+     * @param to_Multiply_Matrix_Untransposed which is an untransposed matrix.
+     *                                        That means it has the same format like
+     *                                        the actual matrix.
+     * @implNote This way to multiply two matrices
+     *           has some performance advantages to the normal multiplication.
+     * @return new matrix
+    */
     public Matrices Mat_Mul_With_Transposed_Matrix (@NotNull Matrices to_Multiply_Matrix_Untransposed)
     {
         int      i;
         int      j;
         int      k;
-        double   result = 0;
         Matrices zwischen_Matrix = new Matrices(to_Multiply_Matrix_Untransposed.getRows(), to_Multiply_Matrix_Untransposed.getLines());
         Matrices neue_Matrix     = new Matrices(matrix.length, matrix[0].length);
 

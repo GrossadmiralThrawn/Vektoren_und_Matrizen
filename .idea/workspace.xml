@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39e2299b-0dbe-4a77-8bc1-8389a6cc2c7b" name="Changes" comment="Korrektur von Bugs.">
+    <list default="true" id="39e2299b-0dbe-4a77-8bc1-8389a6cc2c7b" name="Changes" comment="Verschönerung des Codes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Matrices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vectors_and_Matrices/Vector.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vectors_and_Matrices/Vector.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
       <workItem from="1670836363065" duration="5814000" />
       <workItem from="1672591291694" duration="84000" />
       <workItem from="1672591450988" duration="3115000" />
-      <workItem from="1683208640216" duration="998000" />
+      <workItem from="1683208640216" duration="3766000" />
     </task>
     <task id="LOCAL-00001" summary="Erstellung der Klassen.">
       <created>1670437688039</created>
@@ -159,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672592978148</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Verschönerung des Codes.">
+      <created>1683209821911</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683209821911</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +190,7 @@
     <MESSAGE value="Erstellung einer" />
     <MESSAGE value="Erstellung einer neuen, aber funktionsfähigen Matrizen Klasse." />
     <MESSAGE value="Korrektur von Bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Korrektur von Bugs." />
+    <MESSAGE value="Verschönerung des Codes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Verschönerung des Codes." />
   </component>
 </project>
