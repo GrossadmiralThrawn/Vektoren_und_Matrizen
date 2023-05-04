@@ -10,22 +10,22 @@ import java.util.Scanner;
 
 public class Matrices
 {
-    private Double[][] Matrix;
+    private Double[][] matrix;
 
 
 
 
-    public Matrices(Double[][] matrix)
+    public Matrices(Double[][] given_matrix)
     {
-        Matrix = matrix;
+        matrix = given_matrix;
     }
 
 
 
 
-    public Matrices(int Lines, int Rows)
+    public Matrices(int lines, int rows)
     {
-        Matrix = new Double[Lines][Rows];
+        Matrix = new Double[lines][rows];
     }
 
 
